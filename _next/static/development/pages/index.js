@@ -21630,46 +21630,48 @@ var _jsxFileName = "/Users/kos/projects/onepagehistory/src/Card/Card.tsx";
 var Card = function Card(_ref) {
   var entry = _ref.entry;
   var eventHeight = Math.max(1, entry.dating.to.year() - entry.dating.from.year()) * 1.5;
+  var topPos = Object(_shared_yearToTopPos__WEBPACK_IMPORTED_MODULE_3__["getTopPos"])(entry.dating.to.year());
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     id: entry.name,
     className: "Card",
-    style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, entry.position, {
-      top: Object(_shared_yearToTopPos__WEBPACK_IMPORTED_MODULE_3__["getTopPos"])(entry.dating.to.year())
-    }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "Card__Range",
     style: {
+      top: topPos,
       height: eventHeight
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 17
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "Card__Entry",
+    style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, entry.position, {
+      top: topPos
+    }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "Card__Body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "Card__Title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -21677,7 +21679,7 @@ var Card = function Card(_ref) {
     href: '#' + entry.name,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, entry.title), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -21686,28 +21688,28 @@ var Card = function Card(_ref) {
     href: 'https://wikipedia.org/wiki/' + entry.name,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, "[W]")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "Card__Date",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, entry.subtitle), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "Card__ShortDescription",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   }, entry.shortDescription)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "Card__ImgWrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -21715,7 +21717,7 @@ var Card = function Card(_ref) {
     src: entry.imageUrl,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: this
   }))));
