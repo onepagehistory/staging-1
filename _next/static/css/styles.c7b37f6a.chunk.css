@@ -19,7 +19,6 @@
 .Card:hover .Card__Entry {
   z-index: 999;
   text-shadow: none;
-  max-height: fit-content;
   background: white;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
 
@@ -28,7 +27,6 @@
   visibility: visible; }
 
 .Card:hover .Card__Title {
-  display: block;
   color: #222; }
 
 .Card:hover .Card__ShortDescription {
@@ -61,14 +59,13 @@
   border-radius: 0.25rem;
   overflow: visible;
   text-align: left;
-  max-height: 132px;
-  min-height: 132px;
   transition-duration: 0.5s;
   box-sizing: border-box;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
 
 .Card__Body {
-  padding: 0 0.5rem; }
+  padding: 0 0.5rem;
+  flex: 3 0; }
 
 .Card__Title {
   color: #eee;
@@ -101,13 +98,11 @@
   font-size: 0.8rem; }
 
 .Card__ImgWrapper {
-  max-width: 132px;
-  max-height: 132px; }
+  flex: 2 0; }
   .Card__ImgWrapper img {
+    width: 100%;
     border: 2px solid #fff;
-    border-radius: 0.25rem;
-    max-width: 128px;
-    max-height: 128px; }
+    border-radius: 0.25rem; }
 
 .Scales {
   position: relative; }
